@@ -1,0 +1,114 @@
+---
+title: "Human Computer Interaction - Assignment 2"
+author: "Enrico Buratto"
+date: "Autumn 2021"
+output: pdf_document
+---
+
+# Part A - Statistical test
+
+## First condition
+
+This case is an example of A/B testing: it is a randomized experiment with two variants, A and B, which are the two different groups of 50 participants. In this case we have:
+
+- One dependent variable, _i.e._ the time of task completion;
+- One independent variable with two (independent) levels, _i.e._ the participants splitted into two different groups.
+
+We can assume the dependent variable as normal and continuous; therefore, an appropriate statistical test for this experiment could be **two independent sample t-tests**.
+
+## Second condition
+
+In this case we have:
+
+- One dependent variable, _i.e._ the accuracy of the input techniques. There is also the time, but since we don't want to perform a statistical analysis on it we should ignore it;
+- One independent variable with four levels, _i.e._ the four input techniques.
+
+This study uses a within-subjects design: in this case we could then use a repeated measures ANOVA or a Friedman analysis; however, since the accuracies are not normally distributed we cannot use a parametric method like ANOVA. Therefore, an appropriate statistical test for this experiment could be the **Friedman test**.
+
+## Third condition
+
+In this case we have:
+
+- One dependent variable, _i.e._ the time the users wear the bracelets during the days;
+- One independent variable with three levels, _i.e._ the four user groups. These groups are also independent each other.
+
+We have to study if there are statistical differences between how long the users wear the bracelets; for this, we can use the mean of the time, also knowing that the variances between each condition are similar. Since we can consider wearing times as normally distributed, an appropriate statistical test for this experiment could be the **one-way ANOVA** test.
+
+## Fourth condition
+
+This case is different from the others: in this test, in fact, we have to assess if there are differences in the frequencies of the usability issues. We then have to compare responses to categorical variables, and therefore we can use the chi-square measure or the Fisher's exact test. The main difference between them is that the formes should be used for large samples, while the latter can also be used (and is usually used) for smaller samles; we can consider 3000 samples as a large sample, then an appropriate statistical test for this experiment could be the **chi-square** test.
+
+# Part B - Designing interface for Bicycle Messengers
+
+## Design A
+
+**Input techniques**
+
+This design should use two different input techniques:
+
+- Haptics: the system uses tangible interaction to enable the user to interact with the information on the handlebar (the handlebar is the physical object);
+- Auditory: the system could also be controlled via speech by the user for safety reasons.
+
+**Output techniques**
+
+Apart from the obvious haptics response that the user gets when he/she touches the handlebar, two output techniques could be:
+
+- Auditory: earcons and spoken responses to get notifications on _e.g._ delivery status;
+- Visual: status information and, most importantly, on the way to follow to get to the restaurant and where the items should be delivered.
+
+**Description**
+
+A design for this problem could be to use devices like [Google Glasses](https://www.google.com/glass/start/) or [Hololens](https://www.microsoft.com/en-us/hololens) to display all the needed information and to enable the user to interact in a quasi-handfree fashion with the system. The main idea is then to have an AR system with information displayed in two different (virtual) places:
+
+- On the handlebar: informations like what items are for delivery, and when they should be delivered;
+- On the road: informations regarding where the items are and where they should be delivered, like a GPS navigator with directions directly displayed on the road.
+
+The user can use tangible interaction to interact with the information displayed on the handlebar and to get information on where to go directly ahead of him/her.
+
+## Design B
+
+**Input techniques**
+
+This design should use two different input techniques:
+
+- Haptics: multitouch on the device; this can be used to control the system, _e.g._ accept or not the delivery;
+- Auditory: the system could also be controlled via speech by the user for security reasons as well.
+
+**Output techniques**
+
+- Visual: the phone display shows all the needed information, including the ways to follow (in an AR manner);
+- Auditory: earcons and spoken responses as well;
+- Haptics: vibration. The phone could vibrate in differen manners for different reasons, _e.g._ "turn left", "turn right", "you're arrived" and so on.
+
+**Description**
+
+A simpler but still useful design could be to use (probably) pre-owned devices like a mobile phone and some sound device like headphones. The main idea is to have an AR system on an handheld display, _e.g._ a smartphone, that could indicate the way to follow to get to the restaurant and where the items should be delivered; the display should also show information on what items are for the delivery and when they should be delivered.
+In addition to this, in order to interact with the system without taking the hands off the handlebar, the headphones could use auditory information to tell the user where he/she has to go, and the phone could use vibrations to communicate fastly with the user.
+
+## Pros and Cons of both designs
+
+### Design A
+
+Pros:
+
+- Hands are free if needed
+- There's tactile feedback even if AR
+- Could be less distracting that using a phone, making it more safer
+
+Cons:
+
+- Extra devices needed (Google Lens or Hololens)
+- Interaction is limited to 2D
+- Brightness could be not enough
+
+### Design B
+
+Pros:
+
+- No specialized devices needed, only a phone and headphones
+- Easier to interact with, since people are used to use touchscreens
+
+Cons:
+
+- Brightness could be not enough, even if more than Design A
+- Hands are more free than Design A and the system could be distracting
